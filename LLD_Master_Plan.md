@@ -198,6 +198,28 @@ ParkingLot.releaseVehicle(ticket) → calculates fee
 - Tables, Collections, Normalization
 - Relationships: One-to-One, One-to-Many, Many-to-Many
 - Indexing strategies (slow queries ko fast karna):
+
+---
+
+## Interview Practice, Trade-offs & End-to-End Sims (Added)
+
+**Interview Practice & Mocks**
+- Schedule: 2 timed mock LLD interviews per week (30–45 min each) + 15 min feedback.
+- Format: 10 min clarifying questions & design, 15–25 min design/coding, 5–10 min trade-offs & follow-ups.
+- Pair formats: One whiteboard-style and one coding-style (TypeScript simulation).
+
+**Design Trade-offs Checklist**
+- Always state assumptions (scale, SLAs, consistency needs).
+- Discuss trade-offs: latency vs consistency, simplicity vs extensibility, cost vs performance.
+- Common decisions to justify: caching vs no-caching, denormalization, sharding/partitioning, async queues, strong vs eventual consistency, replication vs single primary.
+- For each solution, give complexity (time/space), failure modes, and rollback/migration plan.
+
+**End-to-End Simulation Examples (How to prepare)**
+- For each Tier-1 problem provide: class diagram, sequence diagram, minimal DB schema, and a tiny TypeScript runnable simulation (API + simple in-memory store).
+- Example scope for `ParkingLot`: APIs to `park`, `leave`, `findAvailable`; class diagram for `ParkingLot/Floor/Slot/Ticket`; a small `server.ts` that simulates flows and unit tests that prove main behaviors.
+- Keep simulations small (<=200 LOC) and runnable locally; include README with commands to run and quick test cases to demonstrate correctness.
+
+---
   - Clustered Index
   - Non-Clustered Index
   - Composite Index
@@ -239,30 +261,8 @@ ParkingLot.releaseVehicle(ticket) → calculates fee
 
 ---
 
-## TypeScript Setup (Day 1 Task)
 
-Sirf 3 cheezein seekhni hain JS se TS mein:
-```typescript
-// 1. Types
-let name: string = "Aayush";
-let age: number = 22;
 
-// 2. Interfaces
-interface Animal {
-    name: string;
-    speak(): void;
-}
-
-// 3. Classes with types
-class Dog implements Animal {
-    name: string;
-    constructor(name: string) { this.name = name; }
-    speak(): void { console.log("Woof!"); }
-}
-```
-**That's it. Baaki sab use-karte-karte seekhoge.**
-
----
 
 ## Success Metric
 

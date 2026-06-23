@@ -28,7 +28,11 @@ class goodBankAcc {
     constructor(balance: number, owner: string) {
         this.balance = balance;
         this.owner = owner;
-    }
+       
+
+       
+ }
+    
 
     // Public method with validation checks (Controlled Modification)
     deposit(amount: number) {
@@ -57,6 +61,9 @@ class goodBankAcc {
     getBalance(): number {
         return this.balance;
     }
+     getOwner(): string {
+        return this.owner;
+    }  
 }
 
 // Client usage
