@@ -198,6 +198,11 @@ ParkingLot.releaseVehicle(ticket) → calculates fee
 - Tables, Collections, Normalization
 - Relationships: One-to-One, One-to-Many, Many-to-Many
 - Indexing strategies (slow queries ko fast karna):
+  - Clustered Index
+  - Non-Clustered Index
+  - Composite Index
+- ACID properties
+- **Live schemas:** E-commerce DB, Booking System DB, Uber DB
 
 ---
 
@@ -220,11 +225,6 @@ ParkingLot.releaseVehicle(ticket) → calculates fee
 - Keep simulations small (<=200 LOC) and runnable locally; include README with commands to run and quick test cases to demonstrate correctness.
 
 ---
-  - Clustered Index
-  - Non-Clustered Index
-  - Composite Index
-- ACID properties
-- **Live schemas:** E-commerce DB, Booking System DB, Uber DB
 
 ### Concurrency Basics (SDE-1/Founding level):
 - Race Conditions (Multiple bookings for same seat)
