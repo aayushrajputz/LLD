@@ -17,15 +17,27 @@
 
 ## Week 1: OOPs + SOLID Principles (The Foundation)
 
-> **Why:** Bina OOPs/SOLID ke Design Patterns sirf memorization ban jaate hain. Isko samajhna = patterns apne aap samajh aayenge.
+> **Why:** Bina OOPs/SOLID/Design Principles ke Design Patterns sirf memorization ban jaate hain. Isko samajhna = patterns apne aap samajh aayenge.
 
 ### Day 1-2: OOPs Deep Dive (Code ke saath)
+- **Essential Relationships & Core Building Blocks (Class Relationships):**
+  - **Classes & Objects:** The basic blueprints and instances.
+  - **Interfaces:** Defining clean behavior contracts.
+  - **Association:** Basic relationships between classes (e.g. Doctor and Patient).
+  - **Aggregation:** Weak "HAS-A" relationship where children can exist independently (e.g. Department and Teacher).
+  - **Composition:** Strong "HAS-A" relationship where children cannot exist without parent (e.g. House and Room).
 - **4 Pillars with WHY:**
   - **Encapsulation:** Bina iske koi bhi class ka internal data directly tod sakta hai
   - **Abstraction:** Complexity chhupao, sirf zaruri cheez dikhao
   - **Inheritance:** Code reuse, par kab use karna chahiye aur kab nahi
   - **Polymorphism:** Ek interface, multiple behaviors
-- **Hands-on:** Har pillar ke liye real problem (bina pattern ke spaghetti code) → phir OOPs se solve
+- **Hands-on:** Har pillar aur relationship ke liye real problem (spaghetti code) → OOPs se solve
+
+### Day 2.5: Software Design Principles (Pragmatic Coding)
+- **DRY (Don't Repeat Yourself):** Code redundancy avoid karna.
+- **KISS (Keep It Simple, Stupid):** Code ko complexity se door aur readable rakhna.
+- **YAGNI (You Aren't Gonna Need It):** Over-engineering se bachna, aur tabhi code likhna jab features required hon.
+- **Composition over Inheritance:** Why inheriting code blindly leads to fragile base-class problems, and how wrapping instances (composition) makes systems robust.
 
 ### Day 3-5: SOLID Principles (One per day)
 Each principle: Real-world BAD code example → WHY it breaks → SOLID-compliant FIX
@@ -197,6 +209,11 @@ ParkingLot.releaseVehicle(ticket) → calculates fee
 - Optimistic Locking (Version number checks)
 - Pessimistic Locking (Row-level locking)
 - Idempotency (Preventing double payments)
+- **Critical Concurrency Concepts:**
+  - **Mutex (Mutual Exclusion):** Protecting shared resources with binary locks.
+  - **Semaphore:** Managing resource pools/counters across threads.
+  - **Deadlock:** Situations where threads wait indefinitely for each other (causes and prevention).
+  - **Thread Pool:** Managing thread reuse and CPU usage.
 - **UML Diagrams:** Class diagrams, Sequence diagrams (habit creation before coding)
 
 ---
