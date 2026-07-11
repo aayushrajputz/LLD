@@ -16,7 +16,6 @@ class invoice {
         this.quantity = quantiy
         this.price = price
         this.taxRate = taxRate
-        this.bookname = bookname;
         this.quantity = quantiy;
         this.price = price;
         this.taxRate = taxRate;
