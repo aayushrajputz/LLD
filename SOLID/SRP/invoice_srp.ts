@@ -63,10 +63,8 @@ class invoicee {
 class inVoicePrinter {
     // invoicee object ko as a parameter accept kiya (loose dependency)
     print(invoice: invoicee): void {
-        console.log("priniting the Invoice for" + invoice.bookname);
-        console.log("prinitng the amount for this invoice:" + invoice.calculateamount());
-        console.log("printing the Invoice for: " + invoice.bookname);
-        console.log("printing the amount for this invoice: " + invoice.calculateamount());
+        console.log("prinitng the Invoice for" + invoice.bookname);
+        console.log("prinitng the amount for this invoice:" + invoice.calulateTaxRate());
     }
 }
 // 3. Persistence (Database/Saving) Class
