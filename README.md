@@ -2,6 +2,10 @@
 
 This repository contains scratch implementations of OOP Pillars, SOLID Principles, Design Patterns, Backend Architecture Patterns, and LLD Case Studies.
 
+## 🎯 Master Learning Plans
+*   [🎨 LLD Master Plan](./LLD_Master_Plan.md) - Deep dive into OOP, SOLID, Design Patterns, and LLD Case Studies.
+*   [🚀 Backend Master Plan](./Backend_Master_Plan.md) - 4-Week production-grade Backend Engineering path (Clean Architecture, validation, transactions, queues, testing, and observability).
+
 ## Repository Structure
 
 ```text
