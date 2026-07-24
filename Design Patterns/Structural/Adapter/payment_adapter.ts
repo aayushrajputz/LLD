@@ -10,7 +10,7 @@ class oldPaymentProcessor {
 }
 
 class paymentAdapter implements PaymentProcessor {
-    oldPaymentProcessor: oldPaymentProcessor
+    private oldPaymentProcessor: oldPaymentProcessor
 
     constructor(oldPaymentProcessor: oldPaymentProcessor) {
         this.oldPaymentProcessor = oldPaymentProcessor
