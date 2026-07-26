@@ -1,4 +1,4 @@
-import { Direction } from "./Enums.ts"
+import { Direction } from "./Enums.ts";
 
 export class Request {
     private sourceFloor: number;
