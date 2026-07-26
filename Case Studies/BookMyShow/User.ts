@@ -1,4 +1,4 @@
-import { Booking } from "./Booking"
+import { Booking } from "./Booking.ts"
 export class User {
     private userId: string
     private name: string

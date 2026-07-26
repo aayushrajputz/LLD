@@ -1,29 +1,39 @@
-import { Seat } from "./seat";
+import { Seat } from "./seat.ts";
+import { Theater } from "./theater.ts";
 
 export class Screen {
-    private ScreenId: string;
+    private screenId: string;
     private name: string;
-    private seats: Seat[]
+    private seats: Seat[];
+    private theatre: Theater | null = null;
 
-    constructor(ScreenId: string, name: string, seats: Seat[]) {
-        this.ScreenId = ScreenId;
+    constructor(screenId: string, name: string) {
+        this.screenId = screenId;
         this.name = name;
-        this.seats = seats;
+        this.seats = [];
     }
-    addSeat(seat: Seat) {
+
+    setTheatre(theatre: Theater): void {
+        this.theatre = theatre;
+    }
+
+    getTheatreCity(): string {
+        return this.theatre ? this.theatre.getCity() : "";
+    }
+
+    addSeat(seat: Seat): void {
         this.seats.push(seat);
     }
+
     getSeats(): Seat[] {
         return this.seats;
     }
 
     getScreenId(): string {
-        return this.ScreenId;
+        return this.screenId;
     }
 
     getName(): string {
         return this.name;
     }
-
-
 }

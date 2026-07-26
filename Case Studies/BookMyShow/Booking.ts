@@ -1,6 +1,6 @@
-import { Show } from "./Show"
-import { ShowSeat } from "./ShowSeat"
-import { BookingStatus } from "./enums"
+import { Show } from "./Show.ts"
+import { ShowSeat } from "./ShowSeat.ts"
+import { BookingStatus } from "./enums.ts"
 
 export class Booking {
     private bookingId: string

@@ -1,7 +1,7 @@
-import { SeatCategory } from "./enums";
-import { Movie } from "./Movie";
-import { Screen } from "./screen";
-import { ShowSeat } from "./ShowSeat";
+import { SeatCategory } from "./enums.ts";
+import { Movie } from "./Movie.ts";
+import { Screen } from "./Screen.ts";
+import { ShowSeat } from "./ShowSeat.ts";
 
 
 export class Show {
@@ -42,7 +42,7 @@ export class Show {
     public getScreen(): Screen {
         return this.screen
     }
-    public getShoewSeat(seatId: string): ShowSeat | undefined {
+    public getShowSeat(seatId: string): ShowSeat | undefined {
         return this.showSeat.get(seatId);
     }
     public getAllShowsSeats(): Map<string, ShowSeat> {
