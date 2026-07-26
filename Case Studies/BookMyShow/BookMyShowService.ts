@@ -15,7 +15,7 @@ export class BookMyShowService {
 
     private static instance: BookMyShowService | null = null;
 
-    private constructor() {}
+    private constructor() { }
 
     public static getInstance(): BookMyShowService {
         if (BookMyShowService.instance === null) {
@@ -41,7 +41,7 @@ export class BookMyShowService {
     public searchShows(city: string, movieTitle: string): Show[] {
         return this.shows.filter(show =>
             show.getScreen().getTheatreCity() === city &&
-            show.getMovie().getTitle() === movieTitle
+            show.getMovie().getTitle()
         );
     }
 
