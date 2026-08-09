@@ -55,5 +55,18 @@ export class BookLending {
 
         return new BookLending(BookItem, member, issueDate, dueDate, null)
     }
+    public returnBook(): void {
+        this.returnDate = new Date()
+        this.BookItem.setStatus(BookStatus.AVAILABLE)
+        const getBorrowlist = this.MemberAccount.getBorrowBook()
+        const index = getBorrowlist.indexOf(this.BookItem)
+
+        if (index > -1) {
+            getBorrowlist.splice(index, 1)
+            console.log("Book returned successfully");
+        } else {
+            console.log("Book not found in the borrow list");
+        }
+    }
 
 }
