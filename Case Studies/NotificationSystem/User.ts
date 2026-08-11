@@ -31,4 +31,19 @@ export class User {
     public getDeviceToken(): string { return this.deviceToken; }
     public getPreferences(): NotificationService[] { return this.preferences; }
 
+    public addPreference(service: NotificationService): void {
+
+        if (!this.preferences.includes(service)) {
+            this.preferences.push(service);
+            console.log(`[Preference Added]: ${this.name} subscribed to ${service}`);
+        }
+    }
+    public removePreference(service: NotificationService): void {
+        this.preferences = this.preferences.filter(p => p !== service)
+        console.log(`[Preference Removed]: ${this.name} unsubscribed from ${service}`);
+    }
+
+    public hasPreference(service: NotificationService): boolean {
+        return this.preferences.includes(service);
+    }
 }
