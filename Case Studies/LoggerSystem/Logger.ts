@@ -11,7 +11,7 @@ export abstract class Logger {
         return logger
     }
     public log(level: LogLevel, message: string): void {
-        if (this.level <= level) {
+        if (this.level === level) {
             this.write(message);
         }
         if (this.nextLogger) {
